@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 140px;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
 img {
@@ -22,7 +22,18 @@ img {
   width: 530px;
   max-height: 380px;
   display: flex;
+  border-radius: 10px;
 }
+
+.card .img1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card .img2 {
+  display: none;
+}
+
 
 h5 {
   font-family: 'Montserrat', sans-serif;
@@ -87,10 +98,38 @@ a button:hover {
   background-color: #063306;
 }
 
+@media only screen and (max-width: 767.98px) {
+   .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 40rem;
+   }
+
+   .card .img1 {
+    display: none;
+   }
+
+   .card .img2 {
+    display: block;
+    width: 100%;
+   }
+
+   .card {
+    margin: 0 15px;
+
+   }
+
+   .desc {
+    background-color: white;
+    height: 355px;
+    border-radius: 10px;
+   }
 
 
-  
-@media screen and (max-width: 375px) {
-    
-} 
-  
+   img {
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+   }
+}
